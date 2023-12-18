@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="register.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <div class="header-left">
+          <a href="login.html">
+            <img
+              src="icons\menu_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="Menu"
+              class="img-logo"
+            />
+            Logo
+          </a>
+        </div>
+
+        <div class="header-middle">
+          <input
+            type="text"
+            placeholder="Search by item name"
+            class="search-bar"
+          />
+
+          <select name="categories" id="categories" class="select-categories">
+            <option value="All Categories" hidden>All Categories</option>
+
+            <option value="Option1">Option 1</option>
+            <option value="Option2">Option 2</option>
+            <option value="Option3">Option 3</option>
+            <option value="Option4">Option 4</option>
+            <option value="Option5">Option 5</option>
+          </select>
+        </div>
+
+        <div class="header-right">
+          <a href="#">
+            <img
+              src="icons/favorite_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="Favorites"
+              aria-label="Favorites"
+          /></a>
+          <a href="checkout.html">
+            <img
+              src="icons/shopping_cart_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="Shopping Cart"
+              aria-label="Shopping Cart"
+          /></a>
+          <a href="login.html" class="login-user"> Login </a>
+          <span> | </span>
+          <a href="register.html" class="signup-user"> Sign Up </a>
+        </div>
+      </header>
+
+      <section>
+        <div class="registerGray">
+          <span>Register</span>
+        </div>
+
+        <div class="registerBlock">
+          <div class="row1">
+            <form>
+              <label for="loginName">Login Name</label> <br />
+              <input type="text" id="loginName" name="loginName" />
+            </form>
+            <form>
+              <label for="firstName">First Name</label> <br />
+              <input type="text" id="firstName" name="firstName" />
+            </form>
+          </div>
+
+          <div class="row2">
+            <form>
+              <label for="passwordFrom">Password</label> <br />
+              <input type="password" id="passwordFrom" name="passwordFrom" />
+            </form>
+            <form>
+              <label for="repeatPassword">Repeat Password</label> <br />
+              <input
+                type="password"
+                id="repeatPassword"
+                name="repeatPassword"
+              />
+            </form>
+          </div>
+          <div class="row3">
+            <form>
+              <label for="emailForm">Email</label> <br />
+              <input type="text" id="emailForm" name="emailForm" />
+            </form>
+            <form>
+              <label for="addressForm">Address</label> <br />
+              <input type="text" id="addressForm" name="addressForm" />
+            </form>
+          </div>
+          <div class="row4-buttons">
+            <button class="cancel-button">Cancel</button>
+            <button type="submit" class="signUp-button">Sign up</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

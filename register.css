@@ -1,0 +1,149 @@
+section {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 60px);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the gray div inside section */
+
+.registerGray {
+  display: flex;
+  align-items: center;
+
+  background-color: rgb(189, 189, 189);
+  height: 50px;
+  width: 800px;
+}
+
+.registerGray span {
+  color: white;
+  padding-left: 25px;
+}
+
+/* Style for the white div inside section */
+
+.registerBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+
+  background-color: white;
+  height: 320px;
+  width: 800px;
+}
+
+input {
+  width: 365px;
+  height: 35px;
+}
+
+label {
+  color: rgb(114, 114, 114);
+}
+
+/* Selecting all classes that have the value "row" written anywhere */
+
+[class*="row"] {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+}
+
+.row3 {
+  margin-bottom: 20px;
+}
+
+.row4-buttons {
+  width: 745px;
+  justify-content: end;
+}
+
+/* Styles for the buttons inside row4-buttons div */
+
+.cancel-button {
+  color: black;
+  background-color: white;
+  border: 1px solid grey;
+  height: 30px;
+  width: calc(calc(365px / 2) - 7.5px);
+  cursor: pointer;
+}
+
+.cancel-button:active {
+  background-color: rgb(225, 225, 225);
+}
+
+.signUp-button {
+  color: white;
+  background-color: rgb(111, 207, 151);
+  border: 0px;
+  height: 30px;
+  width: calc(calc(365px / 2) - 7.5px);
+  cursor: pointer;
+}
+
+.signUp-button:active {
+  background-color: rgb(86, 163, 118);
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+  .registerGray {
+    width: 600px;
+  }
+
+  .registerBlock {
+    width: 600px;
+  }
+
+  input {
+    width: 250px;
+    height: 35px;
+  }
+
+  .row4-buttons {
+    width: 515px;
+  }
+
+  .cancel-button {
+    width: calc(125px - 7.5px);
+  }
+
+  .signUp-button {
+    width: calc(125px - 7.5px);
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .registerGray {
+    width: 300px;
+  }
+
+  .registerBlock {
+    width: 300px;
+  }
+
+  input {
+    width: 130px;
+    height: 35px;
+  }
+
+  .row4-buttons {
+    width: 275px;
+    justify-content: space-evenly;
+  }
+
+  .cancel-button {
+    width: 100px;
+  }
+
+  .signUp-button {
+    width: 100px;
+  }
+}

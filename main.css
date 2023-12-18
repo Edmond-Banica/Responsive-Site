@@ -1,0 +1,283 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  /* The header + nav are 160px in height */
+  height: calc(100% - 160px);
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* Style for the nav */
+
+.grayViewCategory {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* To always stay at 100px height */
+
+  background-color: rgb(224, 224, 224);
+  height: 100px;
+  width: 100%;
+}
+
+nav .mainDivCategory {
+  /* `justify-content: space-between;` and `overflow-x: auto;` are needed in order
+  for the items to not be clipped outside the div */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  column-gap: 10%;
+
+  overflow-x: auto;
+
+  height: 100%;
+  width: 80%;
+}
+
+/* Customize the scrollbar for the .mainDivCategory div */
+
+.mainDivCategory::-webkit-scrollbar {
+  height: 10px;
+}
+
+.mainDivCategory::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+.mainDivCategory::-webkit-scrollbar-thumb {
+  background-color: #d4aa70;
+  border-radius: 100px;
+}
+
+.individualItemCategory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+
+  height: 100%;
+}
+
+.imageCategory {
+  height: 60px;
+  width: 60px;
+  background-color: white;
+}
+
+.textCategory {
+  font-size: 13px;
+}
+
+/* Style for the content inside the section */
+
+.coupons {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: start;
+  justify-content: start;
+  column-gap: 70px;
+  row-gap: 30px;
+
+  margin-top: 20px;
+  width: 1300px;
+}
+
+.coupons:last-child {
+  margin-bottom: 20px;
+}
+
+/* Style for the 1st part of the coupon inside the row */
+
+.coupon-individual-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.coupon-item-image {
+  background-color: rgb(224, 224, 224);
+  height: 200px;
+  width: 200px;
+}
+
+/* Style for the 2nd part of the coupon */
+
+.coupon-item-text {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  height: 80px;
+  width: 200px;
+}
+
+.coupon-item-text-child {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+  margin: 0px 7px 0px 7px;
+  height: 25px;
+  margin-top: 1px;
+}
+
+/* This flex-break separates the items in the column (2 per line) */
+
+.flex-break {
+  flex-basis: 100%;
+  height: 0px;
+}
+
+.flex-break-border {
+  flex-basis: 100%;
+  height: 0px;
+  border: 1px solid rgb(242, 242, 242);
+}
+
+.flex-image {
+  justify-content: end;
+}
+
+.small-text {
+  font-size: 10px;
+}
+
+.smaller-text {
+  justify-content: end;
+  font-size: 8px;
+  color: gray;
+}
+
+.flex-button {
+  justify-content: end;
+}
+
+.add-to-cart-button {
+  font-size: 10px;
+  height: 20px;
+  width: 80px;
+
+  color: black;
+  background-color: white;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.add-to-cart-button:active {
+  background-color: rgb(225, 225, 225);
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1440px) {
+  .coupons {
+    width: 1200px;
+    column-gap: 50px;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .coupons {
+    width: 770px;
+    column-gap: 30px;
+  }
+
+  .coupon-item-image {
+    height: 170px;
+    width: 170px;
+  }
+
+  .coupon-item-text {
+    height: 80px;
+    width: 170px;
+  }
+
+  .coupon-item-text-child {
+    margin: 0px 6px 0px 6px;
+    height: 25px;
+    margin-top: 1px;
+  }
+
+  .small-text {
+    font-size: 9px;
+    margin-right: 0px;
+  }
+
+  .smaller-text {
+    margin-left: 0px;
+    font-size: 7px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .coupons {
+    width: 600px;
+    column-gap: 25px;
+  }
+
+  .coupon-item-image {
+    height: 130px;
+    width: 130px;
+  }
+
+  .coupon-item-text {
+    height: 100px;
+    width: 130px;
+  }
+
+  .coupon-item-text-child {
+    margin: 0px 5px 0px 5px;
+    height: 20px;
+    margin-top: 1px;
+  }
+
+  .coupon-name {
+    font-size: 14px;
+    margin-right: 0px;
+  }
+
+  .flex-image {
+    margin-left: 0px;
+  }
+
+  .svg-fav {
+    height: 20px;
+    width: 20px;
+  }
+
+  .small-text {
+    font-size: 11px;
+    margin-right: 0px;
+  }
+
+  .smaller-text {
+    font-size: 10px;
+    justify-content: start;
+  }
+
+  .flex-break-border + .coupon-item-text-child {
+    font-size: 15px;
+  }
+
+  .add-to-cart-button {
+    width: 70px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .coupons {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .coupons {
+    width: 290px;
+  }
+}

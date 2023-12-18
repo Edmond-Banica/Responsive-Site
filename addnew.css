@@ -1,0 +1,193 @@
+body {
+  background-color: white;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: nowrap;
+  /* The header and gray div are 120px in height */
+  height: calc(100% - 120px);
+  width: 100%;
+}
+
+/* Style for the gray div under header */
+
+.addNewGray {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0; /* To always stay at 60px height*/
+
+  background-color: rgb(189, 189, 189);
+  height: 60px;
+  width: 100%;
+}
+
+.addNewGray span {
+  color: white;
+  font-size: 20px;
+  padding-left: 10%;
+}
+
+/* Style for the content block under gray div */
+
+.contentBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  column-gap: 50px;
+
+  height: 400px;
+  width: 80%;
+  margin-top: 10px;
+}
+
+/* Style for the left / right blocks inside content block */
+
+.leftBlock,
+.rightBlock {
+  height: 100%;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+form,
+input,
+textarea,
+select {
+  width: 100%;
+}
+
+.leftBlock form,
+.leftBlock input,
+.leftBlock select,
+.custom-file-upload {
+  height: 40%;
+}
+
+/* Style for the <input type=file> and the .svg image */
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 1px solid rgb(118, 118, 118);
+  border-radius: 2px;
+  display: inline-block;
+  padding: 6px 0px;
+  cursor: pointer;
+
+  width: 100%;
+  /* Position relative in order to place the .svg image at the end of the label */
+  position: relative;
+}
+
+.svg-file-upload {
+  position: absolute;
+  bottom: 15%;
+  right: 3%;
+}
+
+/* Style for the textareas on the right */
+
+.rightBlock input {
+  height: 32px;
+  margin-bottom: calc(80px - 53px);
+}
+
+.itemName {
+  height: 32px;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+#shortDesc,
+#longDesc {
+  height: 115px;
+  margin-bottom: 15px;
+}
+
+/* Style for the bottom block with buttons inside content block */
+
+.bottomBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  column-gap: 20px;
+
+  height: 30px;
+  width: 80%;
+
+  margin-bottom: 10px;
+}
+
+.back-button {
+  color: black;
+  background-color: white;
+  border: 1px solid grey;
+  height: 100%;
+  width: 180px;
+  cursor: pointer;
+}
+
+.back-button:active {
+  background-color: rgb(225, 225, 225);
+}
+
+.save-button {
+  color: white;
+  background-color: rgb(111, 207, 151);
+  border: 0px;
+  height: 100%;
+  width: 180px;
+  cursor: pointer;
+}
+
+.save-button:active {
+  background-color: rgb(86, 163, 118);
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 575px) {
+  .tinierFont {
+    font-size: 15px;
+  }
+
+  .contentBlock {
+    column-gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .tinierFont {
+    font-size: 12px;
+  }
+
+  .contentBlock,
+  .bottomBlock {
+    column-gap: 25px;
+  }
+
+  .back-button {
+    width: 55%;
+  }
+
+  .save-button {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+}

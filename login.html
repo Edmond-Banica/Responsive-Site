@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <div class="header-left">
+          <a href="login.html">
+            <img
+              src="icons\menu_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="Menu"
+              class="img-logo"
+            />
+            Logo
+          </a>
+        </div>
+
+        <div class="header-middle">
+          <input
+            type="text"
+            placeholder="Search by item name"
+            class="search-bar"
+          />
+
+          <select name="categories" id="categories" class="select-categories">
+            <option value="All Categories" hidden>All Categories</option>
+
+            <option value="Option1">Option 1</option>
+            <option value="Option2">Option 2</option>
+            <option value="Option3">Option 3</option>
+            <option value="Option4">Option 4</option>
+            <option value="Option5">Option 5</option>
+          </select>
+        </div>
+
+        <div class="header-right">
+          <a href="#">
+            <img
+              src="icons/favorite_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="Favorites"
+              aria-label="Favorites"
+          /></a>
+          <a href="checkout.html">
+            <img
+              src="icons/shopping_cart_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="Shopping Cart"
+              aria-label="Shopping Cart"
+          /></a>
+          <a href="login.html" class="login-user"> Login </a>
+          <span> | </span>
+          <a href="register.html" class="signup-user"> Sign Up </a>
+        </div>
+      </header>
+
+      <section>
+        <div class="middle-login">
+          <div class="logo-middle">
+            <p>Logo</p>
+          </div>
+
+          <div class="credentials">
+            <input type="text" placeholder="Login" class="login-input" />
+            <input type="password" placeholder="Password" />
+            <button type="submit" value="Login" class="login-button">
+              Login
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
